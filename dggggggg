@@ -1348,26 +1348,26 @@ end
 			end
 			
 
-		function MainTab:AddSection(SectionName, SectionHeader, SectionDescriptions, SectionIcons)
-    local SectionTitle = Instance.new("TextLabel")
-    local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-    local SectionInfo = {}
-
-    -- Section Title Properties
-    SectionTitle.Name = "SectionTitle"
-    SectionTitle.Parent = MainScrollingfr
-    SectionTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    SectionTitle.Position = UDim2.new(0.99, 0, 0.5, 0)
-    SectionTitle.BackgroundTransparency = 1.000
-    SectionTitle.Size = UDim2.new(0.98, 0, 0.5, 0)
-    SectionTitle.ZIndex = 4
-    SectionTitle.Font = Enum.Font.GothamBold
-    SectionTitle.Text = SectionName or "SECTION"
-    SectionTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-	SectionTitle.TextSize = 15
-    SectionTitle.TextScaled = false
-    SectionTitle.TextWrapped = true
-    SectionTitle.TextXAlignment = Enum.TextXAlignment.Left
+			function MainTab:AddSection(SectionName, SectionHeader, SectionDescriptions, SectionIcons)
+				local SectionTitle = Instance.new("TextLabel")
+				local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+				local SectionInfo = {}
+			
+				-- Section Title Properties
+				SectionTitle.Name = "SectionTitle"
+				SectionTitle.Parent = MainScrollingfr
+				SectionTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				SectionTitle.Position = UDim2.new(0.99, 0, 0.5, 0)
+				SectionTitle.BackgroundTransparency = 1.000
+				SectionTitle.Size = UDim2.new(0.98, 0, 0.5, 0)
+				SectionTitle.ZIndex = 4
+				SectionTitle.Font = Enum.Font.GothamBold
+	SectionTitle.Text = (SectionName and SectionName ~= "" and SectionName) or SectionHeader or "SECTION"
+				SectionTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+				SectionTitle.TextSize = 15
+				SectionTitle.TextScaled = false
+				SectionTitle.TextWrapped = true
+				SectionTitle.TextXAlignment = Enum.TextXAlignment.Left
 
     -- UI Constraint
     UIAspectRatioConstraint.Parent = SectionTitle
